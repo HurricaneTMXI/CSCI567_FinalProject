@@ -1,0 +1,30 @@
+{
+  "Hurricane Katrina": {
+    "RMSE": 0.6458,
+    "MAE": 0.6434,
+    "MAPE": 24.8065,
+    "Train_Weeks": 539,
+    "Test_Weeks": 2
+  },
+  "2008 Financial Crisis": {
+    "RMSE": 0.2018,
+    "MAE": 0.1421,
+    "MAPE": 7.1769,
+    "Train_Weeks": 692,
+    "Test_Weeks": 27
+  },
+  "2014-16 Oil Price Crash": {
+    "RMSE": 0.0531,
+    "MAE": 0.0418,
+    "MAPE": 1.6943,
+    "Train_Weeks": 1000,
+    "Test_Weeks": 80
+  },
+  "COVID-19 Pandemic": {
+    "RMSE": 0.0342,
+    "MAE": 0.0283,
+    "MAPE": 1.3241,
+    "Train_Weeks": 1300,
+    "Test_Weeks": 6
+  }
+}

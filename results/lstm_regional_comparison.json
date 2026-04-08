@@ -1,0 +1,27 @@
+{
+  "PADD1_East_Coast": {
+    "RMSE": 0.1024,
+    "MAE": 0.0596,
+    "MAPE": 1.6673
+  },
+  "PADD2_Midwest": {
+    "RMSE": 0.1178,
+    "MAE": 0.0754,
+    "MAPE": 2.1718
+  },
+  "PADD3_Gulf_Coast": {
+    "RMSE": 0.12,
+    "MAE": 0.0815,
+    "MAPE": 2.5678
+  },
+  "PADD4_Rocky_Mountain": {
+    "RMSE": 0.138,
+    "MAE": 0.0862,
+    "MAPE": 2.3414
+  },
+  "PADD5_West_Coast": {
+    "RMSE": 0.2741,
+    "MAE": 0.1783,
+    "MAPE": 3.6769
+  }
+}
