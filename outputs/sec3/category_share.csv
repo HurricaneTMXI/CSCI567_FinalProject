@@ -1,0 +1,6 @@
+Category,Linear Regression,Ridge Regression,Lasso Regression,Random Forest,XGBoost,MLP,LSTM-B,GRU
+Cross-grade lag,0.317,0.394,0.018,0.852,0.535,0.128,0.307,0.252
+Date / seasonal,0.001,0.004,0.001,0.003,0.004,0.108,0.01,0.039
+Price change,0.057,0.124,0.068,0.051,0.046,0.083,0.138,0.304
+Rolling stat,0.148,0.168,0.0,0.001,0.0,0.207,0.183,0.13
+Target lag,0.477,0.31,0.914,0.093,0.414,0.475,0.361,0.275

@@ -6,11 +6,15 @@ A comparative study of machine learning methods for predicting weekly U.S. gasol
 
 ## Project Overview
 
-We compare multiple ML models (Linear Regression, Ridge, Lasso, Random Forest, XGBoost, MLP, LSTM, GRU) on the task of forecasting weekly U.S. gasoline prices. Beyond basic model comparison, we conduct three extended analyses:
+We compare multiple ML models (Linear Regression, Ridge, Lasso, Random Forest, XGBoost, MLP, LSTM, GRU) on the task of forecasting weekly U.S. gasoline prices. Beyond basic model comparison, we conduct seven extended analyses:
 
 1. **Regional Analysis** — How do models perform across 5 U.S. geographic regions?
 2. **Geopolitical Event Analysis** — How robust are models to price shocks from major world events?
 3. **Concept Drift Analysis** — Do models trained on historical data still work on recent 2022-2026 data?
+4. **Residual & Error Diagnostics** — Bias, autocorrelation (Ljung-Box), Q-Q, heteroscedasticity per model.
+5. **Stable vs. Volatile Deep Dive** — Regime-split RMSE (data-driven high-volatility + COVID-19), family aggregation, degradation ratio.
+6. **Feature Importance Across Families** — Unified permutation importance (Δ-RMSE) across all 8 non-baseline families.
+7. **Cross-Region Generalization** — Structured discussion: national-trained vs. region-trained, transferability ranking.
 
 ## Project Structure
 
@@ -113,10 +117,31 @@ CSCI567_FinalProject/
 │   │         recovery. Compares "no retrain" vs "retrained" model performance
 │   │         to quantify concept drift.
 │   │
-│   └── 06b_extended_analysis_lstm_colab.ipynb  [runs on Google Colab, optional]
-│           Same extended analyses (regional + concept drift) but using LSTM
-│           models on Colab GPU. Provides neural network results to complement
-│           notebook 06's Baseline/LR/XGBoost results.
+│   ├── 06b_extended_analysis_lstm_colab.ipynb  [runs on Google Colab, optional]
+│   │       Same extended analyses (regional + concept drift) but using LSTM
+│   │       models on Colab GPU. Provides neural network results to complement
+│   │       notebook 06's Baseline/LR/XGBoost results.
+│   │
+│   └── 07_final_analysis.ipynb  [runs on Google Colab, GPU recommended]
+│           Four deeper-analysis gaps flagged for the final report, wrapped
+│           in a single one-shot Colab run (4 uploads at top, 1 zip download
+│           at bottom). Sections:
+│             § 1 Residual & error diagnostics — bias, std, skew, kurtosis,
+│                 Ljung-Box, residual time-series, Q-Q, heteroscedasticity,
+│                 ACF, worst-weeks table.  [post-hoc on saved JSONs, no retrain]
+│             § 2 Stable vs. volatile deep dive — model × regime heatmap,
+│                 classical/tree/neural family aggregation, COVID overlay,
+│                 degradation ratio.  [post-hoc on saved JSONs]
+│             § 3 Feature importance across families — retrains LR, Ridge,
+│                 Lasso, RF, XGBoost, MLP, LSTM-B, GRU; computes unified
+│                 permutation importance (Δ-RMSE); top-15 heatmap, category
+│                 shares, shared-top-10.  [only section that needs GPU]
+│             § 4 Cross-region generalization — recomputes national-trained
+│                 vs. region-trained LR and XGBoost, transferability ranking,
+│                 structured 4-finding discussion.
+│           Outputs to a zip containing outputs/sec1..sec4/ with 12 PNGs,
+│           9 CSVs, 4 summary JSONs. Unzip into project root so the notebook's
+│           write-paths match on a local re-run.
 │
 ├── src/
 │   ├── __init__.py
@@ -131,8 +156,17 @@ CSCI567_FinalProject/
 │                              Each file contains model name, horizon, feature mode,
 │                              val/test metrics, and test set predictions.
 │
+├── outputs/                   Figures, CSVs, and summary JSONs produced by notebook 07.
+│   ├── sec1/                  Residual diagnostics (4 PNGs + 2 CSVs + summary.json)
+│   ├── sec2/                  Stable vs. volatile (4 PNGs + 3 CSVs + summary.json)
+│   ├── sec3/                  Feature importance (2 PNGs + 2 CSVs + 2 JSONs)
+│   └── sec4/                  Cross-region (2 PNGs + 2 CSVs + summary.json)
+│
 └── report/
-    └── results_summary.txt    Summary of all results and key findings for the final report.
+    ├── images/                Figures embedded in results_section.docx
+    └── results_section.docx   Draft Results section — now covers EDA (§1), core
+                               comparison (§2), regional (§3), events (§4), concept
+                               drift (§5), extended analysis (§6), and summary (§7).
 ```
 
 ## How to Run
@@ -157,12 +191,25 @@ Run in order: 01 → 02 → 03 → 05 → 06.
 2. Upload all 7 data files: the original CSV + 5 regional XLS + 1 national updated XLS
 3. Run all cells, download result JSONs
 
+**Notebook 07** (Colab, GPU recommended, runs top-to-bottom in one pass):
+1. Zip the local `results/` folder into `results.zip`
+2. Upload `07_final_analysis.ipynb` to Colab, set runtime → T4 GPU
+3. Run all cells; provide the four uploads when prompted:
+   1. `results.zip` (all existing model JSONs with test predictions + dates)
+   2. `PET_PRI_GND_DCUS_NUS_W.csv`
+   3. The 5 regional XLS files (multi-select)
+   4. `national_allgrades_updated.xls`
+4. Total runtime ~12 min on T4 GPU (Section 3 retraining dominates)
+5. `final_analysis_outputs.zip` auto-downloads — unzip into the project root
+   to populate `outputs/sec1..sec4/`
+
 ## Dependencies
 
 ```
 pandas numpy scikit-learn matplotlib seaborn xgboost xlrd openpyxl
 ```
 
-For Colab notebooks (04, 06b): `torch` (pre-installed on Colab).
+For Colab notebooks (04, 06b, 07): `torch` (pre-installed on Colab). Notebook 07
+additionally installs `statsmodels` for Ljung-Box + ACF at runtime.
 
 Locally, XGBoost requires OpenMP: `brew install libomp` (macOS).

@@ -1,0 +1,105 @@
+{
+  "top10_per_model": {
+    "Linear Regression": [
+      "A1_lag1",
+      "R1_lag1",
+      "A1_lag4",
+      "P1_lag1",
+      "A1_rolling_mean_4",
+      "A1_diff_4",
+      "A1_lag3",
+      "A1_rolling_mean_12",
+      "M1_lag1",
+      "A1_lag8"
+    ],
+    "Ridge Regression": [
+      "R1_lag1",
+      "A1_lag1",
+      "A1_lag4",
+      "M1_lag1",
+      "P1_lag1",
+      "A1_diff_4",
+      "A1_rolling_mean_8",
+      "A1_rolling_mean_4",
+      "A1_diff_1",
+      "A1_rolling_mean_12"
+    ],
+    "Lasso Regression": [
+      "A1_lag1",
+      "A1_diff_1",
+      "D1_lag1",
+      "A1_diff_4",
+      "month_cos",
+      "R1_lag1",
+      "month_sin",
+      "A1_rolling_std_12",
+      "P1_lag1",
+      "A1_rolling_std_4"
+    ],
+    "Random Forest": [
+      "R1_lag1",
+      "D1_lag1",
+      "A1_lag1",
+      "M1_lag1",
+      "P1_lag1",
+      "A1_pct_change_1",
+      "A1_diff_1",
+      "A1_pct_change_4",
+      "A1_diff_4",
+      "week_of_year"
+    ],
+    "XGBoost": [
+      "R1_lag1",
+      "A1_lag1",
+      "P1_lag1",
+      "M1_lag1",
+      "A1_diff_1",
+      "A1_pct_change_1",
+      "D1_lag1",
+      "A1_lag3",
+      "week_of_year",
+      "A1_diff_4"
+    ],
+    "MLP": [
+      "A1_lag3",
+      "A1_lag2",
+      "A1_lag4",
+      "A1_lag1",
+      "R1_lag1",
+      "A1_rolling_mean_4",
+      "A1_rolling_mean_12",
+      "month_cos",
+      "A1_diff_4",
+      "A1_rolling_mean_8"
+    ],
+    "LSTM-B": [
+      "D1_lag1",
+      "A1_lag3",
+      "A1_lag4",
+      "A1_rolling_mean_4",
+      "M1_lag1",
+      "R1_lag1",
+      "A1_lag1",
+      "A1_diff_4",
+      "P1_lag1",
+      "A1_rolling_mean_12"
+    ],
+    "GRU": [
+      "A1_diff_1",
+      "R1_lag1",
+      "P1_lag1",
+      "A1_lag1",
+      "A1_pct_change_1",
+      "A1_diff_4",
+      "A1_rolling_mean_8",
+      "A1_lag3",
+      "A1_lag2",
+      "A1_rolling_mean_4"
+    ]
+  },
+  "shared_across_all": [
+    "A1_diff_4",
+    "A1_lag1",
+    "R1_lag1"
+  ]
+}

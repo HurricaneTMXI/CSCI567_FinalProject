@@ -1,0 +1,169 @@
+{
+  "model_event_rmse": {
+    "Stable": {
+      "Linear Regression": 0.041407,
+      "Lasso Regression": 0.050912,
+      "Naive Baseline": 0.061701,
+      "XGBoost": 0.076716,
+      "LSTM-B (h=64,L=1,s=12)": 0.078679,
+      "GRU (h=64,L=2,s=12)": 0.078556,
+      "LSTM-A (h=32,L=1,s=8)": 0.083372,
+      "LSTM-C (h=64,L=2,s=12)": 0.079117,
+      "Random Forest": 0.098823,
+      "LSTM-D (h=128,L=2,s=12)": 0.092749,
+      "Ridge Regression": 0.105196,
+      "MLP-Medium": 0.110655,
+      "MLP-Large": 0.133913,
+      "MLP-Small": 0.168221
+    },
+    "High Volatility": {
+      "Linear Regression": 0.038588,
+      "Lasso Regression": 0.061519,
+      "Naive Baseline": 0.113531,
+      "XGBoost": 0.078641,
+      "LSTM-B (h=64,L=1,s=12)": 0.125723,
+      "GRU (h=64,L=2,s=12)": 0.12846,
+      "LSTM-A (h=32,L=1,s=8)": 0.13975,
+      "LSTM-C (h=64,L=2,s=12)": 0.147113,
+      "Random Forest": 0.126161,
+      "LSTM-D (h=128,L=2,s=12)": 0.145612,
+      "Ridge Regression": 0.12889,
+      "MLP-Medium": 0.194697,
+      "MLP-Large": 0.179661,
+      "MLP-Small": 0.128208
+    },
+    "COVID-19 Pandemic": {
+      "Linear Regression": 0.040129,
+      "Lasso Regression": 0.073371,
+      "Naive Baseline": 0.130871,
+      "XGBoost": 0.077407,
+      "LSTM-B (h=64,L=1,s=12)": 0.148671,
+      "GRU (h=64,L=2,s=12)": 0.138866,
+      "LSTM-A (h=32,L=1,s=8)": 0.168001,
+      "LSTM-C (h=64,L=2,s=12)": 0.209434,
+      "Random Forest": 0.147465,
+      "LSTM-D (h=128,L=2,s=12)": 0.185756,
+      "Ridge Regression": 0.152407,
+      "MLP-Medium": 0.22408,
+      "MLP-Large": 0.2719,
+      "MLP-Small": 0.080804
+    }
+  },
+  "family_regime_rmse": {
+    "Stable": {
+      "Classical": 0.0648,
+      "Neural": 0.1032,
+      "Tree": 0.0878
+    },
+    "High Volatility": {
+      "Classical": 0.0856,
+      "Neural": 0.1487,
+      "Tree": 0.1024
+    },
+    "COVID-19 Pandemic": {
+      "Classical": 0.0992,
+      "Neural": 0.1784,
+      "Tree": 0.1124
+    }
+  },
+  "degradation": [
+    {
+      "Model": "MLP-Small",
+      "RMSE (stable)": 0.168221,
+      "RMSE (volatile)": 0.123912,
+      "Degradation (vol/stable)": 0.736602,
+      "Family": "Neural"
+    },
+    {
+      "Model": "Linear Regression",
+      "RMSE (stable)": 0.041407,
+      "RMSE (volatile)": 0.040683,
+      "Degradation (vol/stable)": 0.982499,
+      "Family": "Classical"
+    },
+    {
+      "Model": "XGBoost",
+      "RMSE (stable)": 0.076716,
+      "RMSE (volatile)": 0.078816,
+      "Degradation (vol/stable)": 1.027374,
+      "Family": "Tree"
+    },
+    {
+      "Model": "Ridge Regression",
+      "RMSE (stable)": 0.105196,
+      "RMSE (volatile)": 0.132172,
+      "Degradation (vol/stable)": 1.256432,
+      "Family": "Classical"
+    },
+    {
+      "Model": "Lasso Regression",
+      "RMSE (stable)": 0.050912,
+      "RMSE (volatile)": 0.064403,
+      "Degradation (vol/stable)": 1.264985,
+      "Family": "Classical"
+    },
+    {
+      "Model": "Random Forest",
+      "RMSE (stable)": 0.098823,
+      "RMSE (volatile)": 0.129387,
+      "Degradation (vol/stable)": 1.309277,
+      "Family": "Tree"
+    },
+    {
+      "Model": "MLP-Large",
+      "RMSE (stable)": 0.133913,
+      "RMSE (volatile)": 0.192191,
+      "Degradation (vol/stable)": 1.435192,
+      "Family": "Neural"
+    },
+    {
+      "Model": "LSTM-B (h=64,L=1,s=12)",
+      "RMSE (stable)": 0.078679,
+      "RMSE (volatile)": 0.127698,
+      "Degradation (vol/stable)": 1.623021,
+      "Family": "Neural"
+    },
+    {
+      "Model": "LSTM-D (h=128,L=2,s=12)",
+      "RMSE (stable)": 0.092749,
+      "RMSE (volatile)": 0.151006,
+      "Degradation (vol/stable)": 1.628103,
+      "Family": "Neural"
+    },
+    {
+      "Model": "GRU (h=64,L=2,s=12)",
+      "RMSE (stable)": 0.078556,
+      "RMSE (volatile)": 0.131807,
+      "Degradation (vol/stable)": 1.67787,
+      "Family": "Neural"
+    },
+    {
+      "Model": "LSTM-A (h=32,L=1,s=8)",
+      "RMSE (stable)": 0.083372,
+      "RMSE (volatile)": 0.142658,
+      "Degradation (vol/stable)": 1.711105,
+      "Family": "Neural"
+    },
+    {
+      "Model": "MLP-Medium",
+      "RMSE (stable)": 0.110655,
+      "RMSE (volatile)": 0.198075,
+      "Degradation (vol/stable)": 1.790031,
+      "Family": "Neural"
+    },
+    {
+      "Model": "Naive Baseline",
+      "RMSE (stable)": 0.061701,
+      "RMSE (volatile)": 0.113639,
+      "Degradation (vol/stable)": 1.841779,
+      "Family": "Classical"
+    },
+    {
+      "Model": "LSTM-C (h=64,L=2,s=12)",
+      "RMSE (stable)": 0.079117,
+      "RMSE (volatile)": 0.151732,
+      "Degradation (vol/stable)": 1.917806,
+      "Family": "Neural"
+    }
+  ]
+}

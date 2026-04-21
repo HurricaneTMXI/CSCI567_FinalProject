@@ -1,0 +1,91 @@
+{
+  "cross_region_table": [
+    {
+      "Region": "PADD1 East Coast",
+      "LR (own)": 0.0652,
+      "LR (national)": 0.0651,
+      "LR gap (%)": -0.1641,
+      "XGB (own)": 0.1629,
+      "XGB (national)": 0.1475,
+      "XGB gap (%)": -9.446,
+      "LSTM (own)": 0.1024,
+      "Avg transfer gap (%)": -4.80505
+    },
+    {
+      "Region": "PADD2 Midwest",
+      "LR (own)": 0.0776,
+      "LR (national)": 0.0794,
+      "LR gap (%)": 2.4003,
+      "XGB (own)": 0.187,
+      "XGB (national)": 0.1622,
+      "XGB gap (%)": -13.2352,
+      "LSTM (own)": 0.1178,
+      "Avg transfer gap (%)": -5.41745
+    },
+    {
+      "Region": "PADD3 Gulf Coast",
+      "LR (own)": 0.083,
+      "LR (national)": 0.0827,
+      "LR gap (%)": -0.4063,
+      "XGB (own)": 0.1576,
+      "XGB (national)": 0.1257,
+      "XGB gap (%)": -20.2411,
+      "LSTM (own)": 0.12,
+      "Avg transfer gap (%)": -10.3237
+    },
+    {
+      "Region": "PADD4 Rocky Mountain",
+      "LR (own)": 0.0688,
+      "LR (national)": 0.0662,
+      "LR gap (%)": -3.7848,
+      "XGB (own)": 0.2071,
+      "XGB (national)": 0.1962,
+      "XGB gap (%)": -5.2573,
+      "LSTM (own)": 0.138,
+      "Avg transfer gap (%)": -4.52105
+    },
+    {
+      "Region": "PADD5 West Coast",
+      "LR (own)": 0.0726,
+      "LR (national)": 0.0772,
+      "LR gap (%)": 6.2712,
+      "XGB (own)": 0.4995,
+      "XGB (national)": 0.638,
+      "XGB gap (%)": 27.7347,
+      "LSTM (own)": 0.2741,
+      "Avg transfer gap (%)": 17.00295
+    }
+  ],
+  "transferability_ranking": [
+    {
+      "Region": "PADD3 Gulf Coast",
+      "LR gap (%)": -0.4063,
+      "XGB gap (%)": -20.2411,
+      "Avg transfer gap (%)": -10.3237
+    },
+    {
+      "Region": "PADD2 Midwest",
+      "LR gap (%)": 2.4003,
+      "XGB gap (%)": -13.2352,
+      "Avg transfer gap (%)": -5.4175
+    },
+    {
+      "Region": "PADD1 East Coast",
+      "LR gap (%)": -0.1641,
+      "XGB gap (%)": -9.446,
+      "Avg transfer gap (%)": -4.805
+    },
+    {
+      "Region": "PADD4 Rocky Mountain",
+      "LR gap (%)": -3.7848,
+      "XGB gap (%)": -5.2573,
+      "Avg transfer gap (%)": -4.521
+    },
+    {
+      "Region": "PADD5 West Coast",
+      "LR gap (%)": 6.2712,
+      "XGB gap (%)": 27.7347,
+      "Avg transfer gap (%)": 17.0029
+    }
+  ]
+}

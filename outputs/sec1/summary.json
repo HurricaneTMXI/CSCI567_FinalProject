@@ -1,0 +1,209 @@
+{
+  "best_model": "Linear Regression",
+  "top4_models": [
+    "Linear Regression",
+    "Lasso Regression",
+    "Naive Baseline",
+    "XGBoost"
+  ],
+  "residual_stats": [
+    {
+      "Model": "Linear Regression",
+      "RMSE": 0.041244,
+      "Bias (mean)": -0.000328,
+      "Std": 0.041345,
+      "Skew": -0.576924,
+      "Kurtosis (excess)": 4.56128,
+      "Ljung-Box p (lag 10)": 0.0
+    },
+    {
+      "Model": "Lasso Regression",
+      "RMSE": 0.054264,
+      "Bias (mean)": 0.04011,
+      "Std": 0.036639,
+      "Skew": -1.920459,
+      "Kurtosis (excess)": 14.148503,
+      "Ljung-Box p (lag 10)": 0.84069
+    },
+    {
+      "Model": "Naive Baseline",
+      "RMSE": 0.07662,
+      "Bias (mean)": -0.00031,
+      "Std": 0.076809,
+      "Skew": -0.190777,
+      "Kurtosis (excess)": 2.084865,
+      "Ljung-Box p (lag 10)": 0.0
+    },
+    {
+      "Model": "XGBoost",
+      "RMSE": 0.077197,
+      "Bias (mean)": 0.045055,
+      "Std": 0.06284,
+      "Skew": -0.577744,
+      "Kurtosis (excess)": 3.437526,
+      "Ljung-Box p (lag 10)": 0.0
+    },
+    {
+      "Model": "LSTM-B (h=64,L=1,s=12)",
+      "RMSE": 0.092102,
+      "Bias (mean)": 0.059033,
+      "Std": 0.070871,
+      "Skew": -0.806474,
+      "Kurtosis (excess)": 4.923169,
+      "Ljung-Box p (lag 10)": 0.0
+    },
+    {
+      "Model": "GRU (h=64,L=2,s=12)",
+      "RMSE": 0.093324,
+      "Bias (mean)": 0.055303,
+      "Std": 0.075359,
+      "Skew": -0.726172,
+      "Kurtosis (excess)": 4.086383,
+      "Ljung-Box p (lag 10)": 0.0
+    },
+    {
+      "Model": "LSTM-A (h=32,L=1,s=8)",
+      "RMSE": 0.099937,
+      "Bias (mean)": 0.067587,
+      "Std": 0.073798,
+      "Skew": -0.431224,
+      "Kurtosis (excess)": 3.005089,
+      "Ljung-Box p (lag 10)": 0.0
+    },
+    {
+      "Model": "LSTM-C (h=64,L=2,s=12)",
+      "RMSE": 0.10029,
+      "Bias (mean)": 0.058215,
+      "Std": 0.081866,
+      "Skew": 0.006721,
+      "Kurtosis (excess)": 2.896217,
+      "Ljung-Box p (lag 10)": 0.0
+    },
+    {
+      "Model": "Random Forest",
+      "RMSE": 0.10652,
+      "Bias (mean)": 0.085442,
+      "Std": 0.063767,
+      "Skew": 0.119518,
+      "Kurtosis (excess)": 1.736415,
+      "Ljung-Box p (lag 10)": 0.0
+    },
+    {
+      "Model": "LSTM-D (h=128,L=2,s=12)",
+      "RMSE": 0.108721,
+      "Bias (mean)": 0.077105,
+      "Std": 0.076839,
+      "Skew": -0.558991,
+      "Kurtosis (excess)": 4.118297,
+      "Ljung-Box p (lag 10)": 0.0
+    },
+    {
+      "Model": "Ridge Regression",
+      "RMSE": 0.11188,
+      "Bias (mean)": 0.10197,
+      "Std": 0.046149,
+      "Skew": -1.435539,
+      "Kurtosis (excess)": 7.983662,
+      "Ljung-Box p (lag 10)": 0.0
+    },
+    {
+      "Model": "MLP-Medium",
+      "RMSE": 0.1355,
+      "Bias (mean)": 0.039386,
+      "Std": 0.12997,
+      "Skew": 0.312004,
+      "Kurtosis (excess)": 0.075706,
+      "Ljung-Box p (lag 10)": 0.0
+    },
+    {
+      "Model": "MLP-Large",
+      "RMSE": 0.149128,
+      "Bias (mean)": 0.110492,
+      "Std": 0.100402,
+      "Skew": 0.669989,
+      "Kurtosis (excess)": -0.177837,
+      "Ljung-Box p (lag 10)": 0.0
+    },
+    {
+      "Model": "MLP-Small",
+      "RMSE": 0.159265,
+      "Bias (mean)": -0.097056,
+      "Std": 0.126587,
+      "Skew": 0.095359,
+      "Kurtosis (excess)": -0.190685,
+      "Ljung-Box p (lag 10)": 0.0
+    }
+  ],
+  "worst_weeks_best_model": [
+    {
+      "Date": "2017-08-28",
+      "Actual": 2.794,
+      "Pred (Linear Regression)": 2.561935300478925,
+      "Abs Error": 0.2320646995210751,
+      "Event": "\u2014"
+    },
+    {
+      "Date": "2017-09-04",
+      "Actual": 2.8,
+      "Pred (Linear Regression)": 2.9340674502905104,
+      "Abs Error": 0.1340674502905106,
+      "Event": "\u2014"
+    },
+    {
+      "Date": "2019-09-16",
+      "Actual": 2.741,
+      "Pred (Linear Regression)": 2.6163220239477774,
+      "Abs Error": 0.12467797605222275,
+      "Event": "\u2014"
+    },
+    {
+      "Date": "2020-03-09",
+      "Actual": 2.343,
+      "Pred (Linear Regression)": 2.4441201055712867,
+      "Abs Error": 0.1011201055712867,
+      "Event": "COVID-19 Pandemic"
+    },
+    {
+      "Date": "2019-06-24",
+      "Actual": 2.798,
+      "Pred (Linear Regression)": 2.701421840040275,
+      "Abs Error": 0.09657815995972507,
+      "Event": "\u2014"
+    },
+    {
+      "Date": "2017-06-05",
+      "Actual": 2.479,
+      "Pred (Linear Regression)": 2.566599823853229,
+      "Abs Error": 0.08759982385322873,
+      "Event": "\u2014"
+    },
+    {
+      "Date": "2017-04-24",
+      "Actual": 2.522,
+      "Pred (Linear Regression)": 2.6084464897646757,
+      "Abs Error": 0.08644648976467595,
+      "Event": "\u2014"
+    },
+    {
+      "Date": "2018-02-12",
+      "Actual": 2.676,
+      "Pred (Linear Regression)": 2.7620586018452684,
+      "Abs Error": 0.08605860184526826,
+      "Event": "\u2014"
+    },
+    {
+      "Date": "2018-02-05",
+      "Actual": 2.724,
+      "Pred (Linear Regression)": 2.809477184785929,
+      "Abs Error": 0.0854771847859288,
+      "Event": "\u2014"
+    },
+    {
+      "Date": "2017-09-11",
+      "Actual": 2.75,
+      "Pred (Linear Regression)": 2.8284962185753004,
+      "Abs Error": 0.07849621857530042,
+      "Event": "\u2014"
+    }
+  ]
+}

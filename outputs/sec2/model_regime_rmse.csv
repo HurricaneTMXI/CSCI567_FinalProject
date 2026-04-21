@@ -1,0 +1,15 @@
+Model,Stable,High Volatility,COVID-19 Pandemic
+Linear Regression,0.0414,0.0386,0.0401
+Lasso Regression,0.0509,0.0615,0.0734
+Naive Baseline,0.0617,0.1135,0.1309
+XGBoost,0.0767,0.0786,0.0774
+"LSTM-B (h=64,L=1,s=12)",0.0787,0.1257,0.1487
+"GRU (h=64,L=2,s=12)",0.0786,0.1285,0.1389
+"LSTM-A (h=32,L=1,s=8)",0.0834,0.1398,0.168
+"LSTM-C (h=64,L=2,s=12)",0.0791,0.1471,0.2094
+Random Forest,0.0988,0.1262,0.1475
+"LSTM-D (h=128,L=2,s=12)",0.0927,0.1456,0.1858
+Ridge Regression,0.1052,0.1289,0.1524
+MLP-Medium,0.1107,0.1947,0.2241
+MLP-Large,0.1339,0.1797,0.2719
+MLP-Small,0.1682,0.1282,0.0808

@@ -1,0 +1,15 @@
+Model,RMSE (stable),RMSE (volatile),Degradation (vol/stable),Family
+MLP-Small,0.1682,0.1239,0.7366,Neural
+Linear Regression,0.0414,0.0407,0.9825,Classical
+XGBoost,0.0767,0.0788,1.0274,Tree
+Ridge Regression,0.1052,0.1322,1.2564,Classical
+Lasso Regression,0.0509,0.0644,1.265,Classical
+Random Forest,0.0988,0.1294,1.3093,Tree
+MLP-Large,0.1339,0.1922,1.4352,Neural
+"LSTM-B (h=64,L=1,s=12)",0.0787,0.1277,1.623,Neural
+"LSTM-D (h=128,L=2,s=12)",0.0927,0.151,1.6281,Neural
+"GRU (h=64,L=2,s=12)",0.0786,0.1318,1.6779,Neural
+"LSTM-A (h=32,L=1,s=8)",0.0834,0.1427,1.7111,Neural
+MLP-Medium,0.1107,0.1981,1.79,Neural
+Naive Baseline,0.0617,0.1136,1.8418,Classical
+"LSTM-C (h=64,L=2,s=12)",0.0791,0.1517,1.9178,Neural
